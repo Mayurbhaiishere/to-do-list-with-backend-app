@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %}
+<title>My website</title>
+<link rel="stylesheet" href="{% static 'main.css' %}">
+<style>
+   .background-image {
+          background-image: url('{% static "Image.png" %}');
+}
+
+</style>
+
+{% endblock %}
+{% block content %}
+
+<div class="background-image">
+  <nav>
+    <img class="icon" src="{% static 'icon.png' %}" alt="icon" />
+    <p id="title">To-Do list</p>
+    <div class="nav-buttons">
+      <button class="tbutton" onclick="location.href=''">Home</button>
+      <button class="tbutton" onclick="window.open('/to-do', '_blank')">To-Do</button>
+      <button class="tbutton" onclick="window.open('/distractions', '_blank')">Distractions</button>
+    </div>
+  </nav>
+  <br />
+  <div class="box">
+    <h1>Welcome to my website!</h1>
+    <br />
+    <h1>My name is Mayur</h1>
+    <br />
+    <h1>My enrollment no is 236120307001</h1>
+  </div>
+</div>
+
+{% endblock %}
